@@ -1,0 +1,15 @@
+syntax = "proto3";
+package hickorytest.hickorytest;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+
+option go_package = "HICKORY-TEST/x/hickorytest/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (amino.name) = "hickorytest/x/hickorytest/Params";
+  option (gogoproto.equal) = true;
+
+  
+}

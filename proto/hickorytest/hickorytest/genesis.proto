@@ -1,0 +1,17 @@
+syntax = "proto3";
+package hickorytest.hickorytest;
+
+import "amino/amino.proto";
+import "gogoproto/gogo.proto";
+import "hickorytest/hickorytest/params.proto";
+
+option go_package = "HICKORY-TEST/x/hickorytest/types";
+
+// GenesisState defines the hickorytest module's genesis state.
+message GenesisState {
+  // params defines all the parameters of the module.
+  Params params = 1 [
+    (gogoproto.nullable) = false,
+    (amino.dont_omitempty) = true
+  ];
+}
